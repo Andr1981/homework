@@ -1,9 +1,10 @@
 package homework6;
 
 public class Dog extends Animals {
-    final int maxRun1 = 500;
-    final double maxJump1 = 0.5;
-    final int maxSwim1 = 10;
+    {
+    maxAnimalsWay = 500;
+    maxAnimalsHeigh = 0.5;
+    maxAnimalsSwimWay = 10;}
 
 
     public Dog(String type, String name){
@@ -23,31 +24,31 @@ public class Dog extends Animals {
 
     @Override
     public void run(int maxRun) {
-       boolean result = maxRun <= 500;
+       boolean result = maxRun <= maxAnimalsWay;
        if(result)maxRun=maxRun;
         System.out.print(getType()+" "+getName()+" бежит "+ maxRun+" метров - ");
        showResult(result);
-        System.out.println(getType()+" бежит максимум - "+maxRun1+" м.;");
+        System.out.println(getType()+" бежит максимум - "+maxAnimalsWay+" м.;");
 
     }
     @Override
     public void jump(double maxJump){
-    boolean result=maxJump <=0.5;
+    boolean result=maxJump <=maxAnimalsHeigh;
         if(result)maxJump=maxJump;
         System.out.print(getType()+" "+getName()+" прыгает "+ maxJump+ " метра - ");
         showResult(result);
-        System.out.println(getType()+" прыгает максимум - "+maxJump1+" м.;");
+        System.out.println(getType()+" прыгает максимум - "+maxAnimalsHeigh+" м.;");
 
 
         }
 
         @Override
         public void swim(int maxSwim){
-        boolean result=maxSwim <=10;
+        boolean result=maxSwim <=maxAnimalsSwimWay;
         if(result)maxSwim=maxSwim;
             System.out.print(getType()+" "+getName()+" плавает "+ maxSwim+ " метров - ");
             showResult(result);
-            System.out.println(getType()+" плавает максимум - "+maxSwim1+" м.;");
+            System.out.println(getType()+" плавает максимум - "+maxAnimalsSwimWay+" м.;");
     }
 
 

@@ -2,8 +2,11 @@ package homework6;
 
 
     public class Cat extends Animals {
-        final int maxRun1 = 200;
-        final double maxJump1 = 2;
+        {
+            maxAnimalsWay= 200;
+            maxAnimalsHeigh= 2;
+        }
+
         public Cat(String type, String name){
             this.type = type;
             this.name = name;
@@ -16,19 +19,19 @@ package homework6;
         }
         @Override
         public void run (int maxRun){
-            boolean result=maxRun <= maxRun1;
+            boolean result=maxRun <= maxAnimalsWay;
             if (result)maxRun=maxRun;
             System.out.print(getType()+" "+getName()+" бежит "+ maxRun+" метров - ");
             showResult(result);
-            System.out.println(getType()+" бежит максимум - "+maxRun1+" м.;");
+            System.out.println(getType()+" бежит максимум - "+maxAnimalsWay+" м.;");
         }
         @Override
         public void jump(double maxJump) {
-            boolean result=maxJump <= maxJump1;
+            boolean result=maxJump <= maxAnimalsHeigh;
             if (result)maxJump = maxJump;
             System.out.print(getType()+" "+getName()+" прыгает "+ maxJump+" метра - ");
             showResult(result);
-            System.out.println(getType()+" прыгает максимум на - "+maxJump1+" м.;");
+            System.out.println(getType()+" прыгает максимум на - "+maxAnimalsHeigh+" м.;");
 
 
 
